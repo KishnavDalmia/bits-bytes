@@ -12,19 +12,35 @@
       rel="stylesheet"
     />
     <style>
+      html{
+        background-color: #000;
+      }
       form {
         height: 75%;
         width: 20%;
+        background-color: white;
         border: 1px solid #444;
         padding: 20px;
-        margin: auto;
+        margin: 5% auto;
         display: flex;
         flex-direction: column;
         gap: 15px;
         font-family: "Rubik", sans-serif;
+        box-shadow: 0 0 55px #c7c3c3;
       }
       input {
         height: 25px;
+      }
+      .submit{
+        border: none;
+        width:100%;
+        margin:auto;
+        background: inherit;
+        font-size: 2rem;
+        border: 1px solid #777;
+      }
+      .submit:hover{
+        color:darkgray;
       }
     </style>
   </head>
@@ -43,6 +59,7 @@
         <input type="text" id="hostelblock" class="hostelblock" name="_csrf"/><br />
         <label for="">Hostel Room</label>
         <input type="text" id="room" class="room" name="_csrf"/><br />
+        <button type="submit" class="submit">Submit</button>
       </form>
     </div>
   </body>

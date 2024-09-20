@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <style>
-      html{
+      html {
         background-color: #000;
       }
       form {
@@ -26,35 +26,31 @@
         flex-direction: column;
         gap: 15px;
         font-family: "Rubik", sans-serif;
+        box-shadow: 0 0 55px #c7c3c3;
       }
       input {
         height: 25px;
       }
-      .submit{
+      .submit {
         border: none;
+        width: 100%;
+        margin: auto;
         background: inherit;
         font-size: 2rem;
+        border: 1px solid #777;
       }
-      .submit:hover{
-        color:darkgray;
+      .submit:hover {
+        color: darkgray;
       }
     </style>
   </head>
   <body>
-    <div class="sign-up">
-      <form action="/signup" method="post">
-        <label for="">Username</label>
-        <input type="text" id="username" class="username" name="_csrf"/><br />
+    <div class="sign-in">
+      <form>
         <label for="">Registration No. </label>
-        <input type="text" id="regno" class="regno" name="_csrf"/><br />
+        <input type="text" id="regno" class="regno" name="_csrf" /><br />
         <label for="">Password</label>
-        <input type="text" id="password" class="password" name="_csrf"/><br />
-        <label for="">Hostel Type(M/F)</label>
-        <input type="text" id="hosteltype" class="hosteltype" name="_csrf"/><br />
-        <label for="">Hostel Block</label>
-        <input type="text" id="hostelblock" class="hostelblock" name="_csrf"/><br />
-        <label for="">Hostel Room</label>
-        <input type="text" id="room" class="room" name="_csrf"/><br />
+        <input type="text" id="password" class="password" name="_csrf" /><br />
         <button type="submit" class="submit">Submit</button>
       </form>
     </div>
