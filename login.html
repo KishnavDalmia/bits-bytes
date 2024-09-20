@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      form {
+        height: 75%;
+        width: 20%;
+        border: 1px solid #444;
+        padding: 20px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-family: "Rubik", sans-serif;
+      }
+      input {
+        height: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sign-up">
+      <form action="/signup" method="post">
+        <label for="">Username</label>
+        <input type="text" id="username" class="username" name="_csrf"/><br />
+        <label for="">Registration No. </label>
+        <input type="text" id="regno" class="regno" name="_csrf"/><br />
+        <label for="">Password</label>
+        <input type="text" id="password" class="password" name="_csrf"/><br />
+        <label for="">Hostel Type(M/F)</label>
+        <input type="text" id="hosteltype" class="hosteltype" name="_csrf"/><br />
+        <label for="">Hostel Block</label>
+        <input type="text" id="hostelblock" class="hostelblock" name="_csrf"/><br />
+        <label for="">Hostel Room</label>
+        <input type="text" id="room" class="room" name="_csrf"/><br />
+      </form>
+    </div>
+  </body>
+</html>
