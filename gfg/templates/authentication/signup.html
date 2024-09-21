@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login/Sign Up</title>
-    <link rel="stylesheet" href="style.css" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,20 +48,21 @@
   <body>
     <div class="sign-up">
       <form action="/signup" method="post">
+        {% csrf_token %}
         <label for="">Name</label>
-        <input type="text" id="Name" class="Name" name="_csrf"/><br />
+        <input type="text" id="Name" class="Name" name="name"/><br />
         <label for="">Registration No. </label>
-        <input type="text" id="regNo" class="regNo" name="_csrf"/><br />
+        <input type="text" id="regNo" class="regNo" name="regNo"/><br />
         <label for="">Password</label>
-        <input type="text" id="Pass1" class="Pass1" name="_csrf"/><br />
+        <input type="password" id="Pass1" class="Pass1" name="password1"/><br />
         <label for="">Confirm Password</label>
-        <input type="text" id="Pass2" class="Pass2" name="_csrf"/><br />
+        <input type="password" id="Pass2" class="Pass2" name="password2"/><br />
         <label for="">Hostel Type(M/F)</label>
-        <input type="text" id="Hostel_type" class="Hostel_type" name="_csrf"/><br />
+        <input type="text" id="Hostel_type" class="Hostel_type" name="hostel_type"/><br />
         <label for="">Hostel Block</label>
-        <input type="text" id="Hostel_block" class="Hostel_block" name="_csrf"/><br />
+        <input type="text" id="Hostel_block" class="Hostel_block" name="hostel_block"/><br />
         <label for="">Hostel Room</label>
-        <input type="text" id="roomNo" class="roomNo" name="_csrf"/><br />
+        <input type="text" id="roomNo" class="roomNo" name="roomNo"/><br />
         <button type="submit" class="submit">Submit</button>
       </form>
     </div>
