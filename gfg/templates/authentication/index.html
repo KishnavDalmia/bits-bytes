@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bits&Bytes</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,11 +25,11 @@
           </div> -->
       <header>
         <navbar class="nav">
-          <img src="assets/logo4.jpeg" alt="" id="logo" />
+          <img src="{% static 'assets/logo4.jpeg' %}" alt="" id="logo" />
           <nav class="right">
             <a href="#to-students">To Students</a>
             <a href="">From Students</a>
-            <a href="signup.html" id="login">Login/Register</a>
+            <a href="{% url 'signup' %}" id="login">Login/Register</a>
           </nav>
         </navbar>
         <section class="hero">
@@ -44,7 +44,7 @@
             </p>
           </div>
           <div>
-            <img src="assets/main3.png" alt="" id="main-bg" />
+            <img src="{% static 'assets/main3.png' %}" alt="" id="main-bg" />
           </div>
         </section>
       </header>
@@ -75,7 +75,7 @@
           </ul>
         </div>
         <div class="section1flex2">
-          <img src="assets/toStudents.jpeg" alt="" class="to-picture" />
+          <img src="{% static 'assets/toStudents.jpeg' %}" alt="" class="to-picture" />
         </div>
       </section>
       <section id="from-students">
@@ -102,7 +102,7 @@
           </p>
         </div>
         <div class="section1flex2">
-          <img src="assets/map.png" alt="" class="from-picture" />
+          <img src="{% static 'assets/map.png' %}" alt="" class="from-picture" />
         </div>
       </section>
       <!-- <section id="from-students">
@@ -115,6 +115,6 @@
         </ul>
       </section> -->
     </div>
-    <script src="script.js"></script>
+    <script src="{% static 'script.js' %}"></script>
   </body>
 </html>

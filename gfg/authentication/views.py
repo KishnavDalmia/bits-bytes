@@ -82,9 +82,6 @@ def signup(request):
         send_mail(subject,message,from_email,to_list,fail_silently=True)
 
 
-
-
-
         return redirect('signin')
         
 def signin(request):
