@@ -67,7 +67,10 @@ def signup(request):
             messages.error(request, "Registration Number should be alphanumeric")
             return redirect('home')
         
-        myuser = User.objects.create_user(Name,email,Pass1,regNo,contactnumber) 
+        myuser = User.objects.create_user(username=Name, email=email, password=Pass1)
+        myuser.first_name = Name
+        myuser.last_name = regNo
+        myuser.save()
         
 
         myuser.save() #saves the user
@@ -86,7 +89,7 @@ def signup(request):
         
 def signin(request):
     if request.method == "POST":
-        regNo = request.POST('Registration Number')
+        user = authenticate(username=regNo, password=Pass1)
         Pass1 = request.POST('Password')
 
         user = authenticate(regNo=regNo,password=Pass1)
